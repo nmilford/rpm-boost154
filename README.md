@@ -11,6 +11,6 @@ To Build:
 
 `wget http://downloads.sourceforge.net/project/boost/boost/1.54.0/boost_1_54_0.tar.gz -O ~/rpmbuild/SOURCES/boost_1_54_0.tar.gz`
 
-`wget https://raw.github.com/nmilford/rpm-boost/master/boost154.spec -O ~/rpmbuild/SPECS/boost154.spec`
+`wget https://raw.github.com/nmilford/rpm-boost154/master/boost154.spec -O ~/rpmbuild/SPECS/boost154.spec`
 
 `rpmbuild -bb ~/rpmbuild/SPECS/boost154.spec`

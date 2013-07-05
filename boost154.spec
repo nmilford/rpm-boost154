@@ -3,7 +3,7 @@
 # sudo yum -y install rpmdevtools && rpmdev-setuptree
 # sudo yum -y install bzip2-devel gcc44-c++ python-devel python-libs libicu-devel openmpi-libs
 # wget http://downloads.sourceforge.net/project/boost/boost/1.54.0/boost_1_54_0.tar.gz -O ~/rpmbuild/SOURCES/boost_1_54_0.tar.gz
-# wget https://raw.github.com/nmilford/rpm-boost/master/boost154.spec -O ~/rpmbuild/SPECS/boos154t.spec
+# wget https://raw.github.com/nmilford/rpm-boost154/master/boost154.spec -O ~/rpmbuild/SPECS/boos154t.spec
 # rpmbuild -bb ~/rpmbuild/SPECS/boost154.spec
 
 %define major_ver 1
