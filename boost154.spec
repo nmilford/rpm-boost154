@@ -3,8 +3,8 @@
 # sudo yum -y install rpmdevtools && rpmdev-setuptree
 # sudo yum -y install bzip2-devel gcc44-c++ python-devel python-libs libicu-devel openmpi-libs
 # wget http://downloads.sourceforge.net/project/boost/boost/1.54.0/boost_1_54_0.tar.gz -O ~/rpmbuild/SOURCES/boost_1_54_0.tar.gz
-# wget https://raw.github.com/nmilford/rpm-boost/master/boost.spec -O ~/rpmbuild/SPECS/boost.spec
-# rpmbuild -bb ~/rpmbuild/SPECS/boost.spec
+# wget https://raw.github.com/nmilford/rpm-boost/master/boost154.spec -O ~/rpmbuild/SPECS/boos154t.spec
+# rpmbuild -bb ~/rpmbuild/SPECS/boost154.spec
 
 %define major_ver 1
 %define minor_ver 54
@@ -12,7 +12,7 @@
 %define flat_ver  %{major_ver}_%{minor_ver}_%{patch_lvl}
 %define dot_ver   %{major_ver}.%{minor_ver}.%{patch_lvl}
 
-Name:           boost
+Name:           boost154
 Version:        %{dot_ver}
 Release:        1
 Summary:        The Boost C++ headers and shared development libraries
@@ -29,46 +29,48 @@ BuildRequires:  libicu-devel
 BuildRequires:  openmpi-libs
 Requires:       bzip2
 Requires:       python-libs
-Provides:       boost-date-time
-Provides:       boost-filesystem
-Provides:       boost-graph 
-Provides:       boost-iostreams
-Provides:       boost-program-options
-Provides:       boost-python
-Provides:       boost-regex
-Provides:       boost-serialization
-Provides:       boost-signals
-Provides:       boost-system
-Provides:       boost-test
-Provides:       boost-thread
-Provides:       boost-wave
-Conflicts:      boost141
-Conflicts:      boost141-date-time
-Conflicts:      boost141-devel
-Conflicts:      boost141-doc
-Conflicts:      boost141-filesystem
-Conflicts:      boost141-graph
-Conflicts:      boost141-graph-mpich2
-Conflicts:      boost141-graph-openmpi
-Conflicts:      boost141-iostreams
-Conflicts:      boost141-math
-Conflicts:      boost141-mpich2
-Conflicts:      boost141-mpich2-devel
-Conflicts:      boost141-mpich2-python
-Conflicts:      boost141-openmpi
-Conflicts:      boost141-openmpi-devel
-Conflicts:      boost141-openmpi-python
-Conflicts:      boost141-program-options
-Conflicts:      boost141-python
-Conflicts:      boost141-regex
-Conflicts:      boost141-serialization
-Conflicts:      boost141-signals
-Conflicts:      boost141-signals
-Conflicts:      boost141-static
-Conflicts:      boost141-system
-Conflicts:      boost141-test
-Conflicts:      boost141-thread
-Conflicts:      boost141-wave   
+Obsoletes:      boost
+Obsoletes:      boost-date-time
+Obsoletes:      boost-devel
+Obsoletes:      boost-filesystem
+Obsoletes:      boost-graph 
+Obsoletes:      boost-iostreams
+Obsoletes:      boost-program-options
+Obsoletes:      boost-python
+Obsoletes:      boost-regex
+Obsoletes:      boost-serialization
+Obsoletes:      boost-signals
+Obsoletes:      boost-system
+Obsoletes:      boost-test
+Obsoletes:      boost-thread
+Obsoletes:      boost-wave
+Obsoletes:      boost141
+Obsoletes:      boost141-date-time
+Obsoletes:      boost141-devel
+Obsoletes:      boost141-doc
+Obsoletes:      boost141-filesystem
+Obsoletes:      boost141-graph
+Obsoletes:      boost141-graph-mpich2
+Obsoletes:      boost141-graph-openmpi
+Obsoletes:      boost141-iostreams
+Obsoletes:      boost141-math
+Obsoletes:      boost141-mpich2
+Obsoletes:      boost141-mpich2-devel
+Obsoletes:      boost141-mpich2-python
+Obsoletes:      boost141-openmpi
+Obsoletes:      boost141-openmpi-devel
+Obsoletes:      boost141-openmpi-python
+Obsoletes:      boost141-program-options
+Obsoletes:      boost141-python
+Obsoletes:      boost141-regex
+Obsoletes:      boost141-serialization
+Obsoletes:      boost141-signals
+Obsoletes:      boost141-signals
+Obsoletes:      boost141-static
+Obsoletes:      boost141-system
+Obsoletes:      boost141-test
+Obsoletes:      boost141-thread
+Obsoletes:      boost141-wave   
 
 %description
 Boost provides free peer-reviewed portable C++ source libraries.  The
